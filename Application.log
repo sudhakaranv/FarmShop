@@ -1,0 +1,10 @@
+2020-02-06 06:26:55.670  INFO 2196 --- [main] com.web.farmshop.FarmShopApplication     : Starting FarmShopApplication on LAPTOP-RR17VMK2 with PID 2196 (C:\Users\Eigenaar\Documents\workspace-sts-3.9.11.RELEASE\FarmShop\target\classes started by Eigenaar in C:\Users\Eigenaar\Documents\workspace-sts-3.9.11.RELEASE\FarmShop)
+2020-02-06 06:26:55.680 DEBUG 2196 --- [main] com.web.farmshop.FarmShopApplication     : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-06 06:26:55.682  INFO 2196 --- [main] com.web.farmshop.FarmShopApplication     : No active profile set, falling back to default profiles: default
+2020-02-06 06:27:01.922  INFO 2196 --- [main] com.web.farmshop.FarmShopApplication     : Started FarmShopApplication in 8.132 seconds (JVM running for 10.191)
+2020-02-06 06:27:01.927 DEBUG 2196 --- [main] com.web.farmshop.FarmShopApplication     : --FarmShop Application Started--
+2020-02-06 06:34:11.736  INFO 36568 --- [main] com.web.farmshop.FarmShopApplication     : Starting FarmShopApplication on LAPTOP-RR17VMK2 with PID 36568 (C:\Users\Eigenaar\Documents\workspace-sts-3.9.11.RELEASE\FarmShop\target\classes started by Eigenaar in C:\Users\Eigenaar\Documents\workspace-sts-3.9.11.RELEASE\FarmShop)
+2020-02-06 06:34:11.748 DEBUG 36568 --- [main] com.web.farmshop.FarmShopApplication     : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-06 06:34:11.750  INFO 36568 --- [main] com.web.farmshop.FarmShopApplication     : No active profile set, falling back to default profiles: default
+2020-02-06 06:34:18.809  INFO 36568 --- [main] com.web.farmshop.FarmShopApplication     : Started FarmShopApplication in 9.491 seconds (JVM running for 11.438)
+2020-02-06 06:34:18.816 DEBUG 36568 --- [main] com.web.farmshop.FarmShopApplication     : --FarmShop Application Started--
