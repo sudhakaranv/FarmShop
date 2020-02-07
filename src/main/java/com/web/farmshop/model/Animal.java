@@ -1,18 +1,19 @@
 package com.web.farmshop.model;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-@JacksonXmlRootElement(localName = "animal")
+
 public class Animal {
 
-	@JacksonXmlProperty
+	
 	private String name;
-	@JacksonXmlProperty
+
 	private String type;
-	@JacksonXmlProperty
+	
 	private char sex;
-	@JacksonXmlProperty
+	
+	@JsonInclude(Include.NON_DEFAULT)
 	private int wool;
 
 	public String getType() {
@@ -46,5 +47,4 @@ public class Animal {
 	public void setWool(int wool) {
 		this.wool = wool;
 	}
-
 }

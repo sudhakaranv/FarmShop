@@ -15,17 +15,24 @@ import org.springframework.stereotype.Repository;
 import org.springframework.util.FileCopyUtils;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.web.farmshop.model.Animal;
-import com.web.farmshop.model.Flock;
+
+import com.web.farmshop.model.FlockInput;
+import com.web.farmshop.model.FlockOverview;
+import com.web.farmshop.model.Goat;
+import com.web.farmshop.model.Lamb;
 import com.web.farmshop.model.OrderHistory;
 import com.web.farmshop.model.Products;
+import com.web.farmshop.model.Sheep;
 
 @Repository
 public class FarmShopDAO {
 
 	private static final Logger logger = LoggerFactory.getLogger(FarmShopDAO.class);
 
-	private Flock flock;
+	private FlockInput flockInput;
+	
+	@Autowired
+	private FlockOverview flockOverview;
 
 	@Autowired
 	private Products productsStock;
@@ -59,10 +66,9 @@ public class FarmShopDAO {
 		try {
 			byte[] bdata = FileCopyUtils.copyToByteArray(resource.getInputStream());
 			String xml = new String(bdata, StandardCharsets.UTF_8);
-			flock = mapper.readValue(xml, Flock.class);
+			flockInput = mapper.readValue(xml, FlockInput.class);
 		} catch (IOException e) {
 			logger.error("Unable to load input xml: " + e.getMessage());
-			flock = null;
 		}
 
 	}
@@ -72,28 +78,39 @@ public class FarmShopDAO {
 	 * input object
 	 */
 	private void getProductsStockFromInput() {
+		
 		int totalWoolSizeinKg = 0;
 		int totalMilkVolumeInLtr = 0;
+		
 
-		for (Animal animal : flock.getFlockOfAnimal()) {
-			totalWoolSizeinKg += animal.getWool();
-			char sex = animal.getSex();
-			String type = animal.getType();
+		for(Sheep sheep : flockInput.getSheeps()) {
+			
+			totalWoolSizeinKg += sheep.getWool();
 
-			if ((type.equals("sheep")) && (sex == 'f')) {
+			if (sheep.getSex()== 'f') {
+				
 				totalMilkVolumeInLtr += 30;
-			} else if ((type.equals("goat")) && (sex == 'f')) {
-				totalMilkVolumeInLtr += 50;
-			}
+			} 
+
+		}
+		
+        for(Lamb lamb: flockInput.getLambs()) {
+			
+			totalWoolSizeinKg += lamb.getWool();
 
 		}
 
+        for(Goat goat: flockInput.getGoats())
+        {
+        	
+          if (goat.getSex()== 'f') {
+				
+				totalMilkVolumeInLtr += 50;
+			} 
+        }
+        
 		productsStock.setMilk(totalMilkVolumeInLtr);
 		productsStock.setWool(totalWoolSizeinKg);
-	}
-
-	public Flock getFlock() {
-		return flock;
 	}
 
 	public Products getProductsStock() {
@@ -102,6 +119,11 @@ public class FarmShopDAO {
 
 	public OrderHistory getOrderHistory() {
 		return orderHistory;
+	}
+	
+	public FlockOverview getFlockOverview() {
+		flockOverview.setFlockInput(flockInput);
+		return flockOverview;
 	}
 
 }

@@ -4,7 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.web.farmshop.dao.FarmShopDAO;
-import com.web.farmshop.model.Flock;
+import com.web.farmshop.model.FlockInput;
+import com.web.farmshop.model.FlockOverview;
 import com.web.farmshop.model.Order;
 import com.web.farmshop.model.OrderHistory;
 import com.web.farmshop.model.Products;
@@ -20,8 +21,8 @@ public class FarmShopService {
 	@Autowired
 	private FarmShopDAO farmShopDAO;
 
-	public Flock getFlock() {
-		return farmShopDAO.getFlock();
+	public FlockOverview getFlockOverview() {
+		return farmShopDAO.getFlockOverview(); 
 	}
 
 	public Products getProductsStock() {

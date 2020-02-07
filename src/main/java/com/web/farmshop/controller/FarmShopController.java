@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.web.farmshop.model.Flock;
+import com.web.farmshop.model.FlockOverview;
 import com.web.farmshop.model.Order;
 import com.web.farmshop.model.OrderHistory;
 import com.web.farmshop.model.Products;
@@ -24,8 +24,8 @@ public class FarmShopController {
 	private FarmShopService farmShopService;
 
 	@GetMapping(value = "/flock", produces = "application/json")
-	public Flock getFlock() {
-		return farmShopService.getFlock();
+	public FlockOverview getFlockOverview() {
+		return farmShopService.getFlockOverview();
 
 	}
 

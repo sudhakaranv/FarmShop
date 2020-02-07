@@ -1,7 +1,7 @@
 <flock>
- <animal type="sheep" name="Robert" sex="m" wool="34" />
- <animal type="sheep" name="Betty" sex="f" wool="28" />
- <animal type="lamb" name="Teemo" sex="m" wool="5" />
- <animal type="goat" name="Alice" sex="f" />
- <animal type="goat" name="Stanislas" sex="m" />
+ <sheep name="Robert" sex="m" wool="34" />
+ <sheep name="Betty" sex="f" wool="28" />
+ <lamb name="Teemo" sex="m" wool="5" />
+ <goat name="Alice" sex="f" />
+ <goat name="Stanislas" sex="m" />
 </flock>
