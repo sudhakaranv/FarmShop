@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> 
 	</parent>
 	<groupId>com.web</groupId>
 	<artifactId>FormShop</artifactId>
@@ -24,9 +24,8 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-
-<dependency>
-	   <groupId>com.fasterxml.jackson.dataformat</groupId>
+     <dependency>
+	<groupId>com.fasterxml.jackson.dataformat</groupId>
     <artifactId>jackson-dataformat-xml</artifactId>
     </dependency>
 

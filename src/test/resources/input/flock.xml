@@ -1,0 +1,5 @@
+<flock>
+ <sheep name="TestSheep" sex="m" wool="34" />
+ <lamb name="TestLamb" sex="m" wool="5" />
+ <goat name="TestGoat" sex="f" />
+</flock>

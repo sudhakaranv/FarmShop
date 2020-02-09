@@ -22,7 +22,7 @@ import com.web.farmshop.service.FarmShopService;
  *
  */
 @RestController
-@RequestMapping("farmshop")
+@RequestMapping(value="/farmshop")
 public class FarmShopController {
 
 	@Autowired

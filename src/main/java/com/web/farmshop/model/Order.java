@@ -1,5 +1,7 @@
 package com.web.farmshop.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * @author Eigenaar
  *
@@ -7,6 +9,8 @@ package com.web.farmshop.model;
 public class Order {
 
 	private String customer;
+	
+	@JsonProperty("order")
 	private Products orderedProducts;
 
 	public Products getOrderedProducts() {
