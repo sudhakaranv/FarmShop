@@ -58,7 +58,7 @@ public class FarmShopService {
 	
 	
 	/**
-	 * This method will load input data on application startup
+	 * This method load input data on application startup
 	 */
 	@PostConstruct
 	public void loadInputOnApplicationStartUp() {
@@ -68,6 +68,8 @@ public class FarmShopService {
 
 	/**
 	 * @param xmlPath
+	 * 
+	 * This method maps input xml file to java object using Jackson object mapper
 	 */
 	public void mapInputXmltoObject(String xmlPath)
 	{
@@ -85,7 +87,9 @@ public class FarmShopService {
 	}
 	
 	/**
-	 * @return
+	 * @return Products
+	 * 
+	 * This method is to get the available products stock from flock
 	 */
 	public Products getProductsStock() {
 		
@@ -137,7 +141,9 @@ public class FarmShopService {
 	
 
 	/**
-	 * @return
+	 * @return OrderHistory
+	 * 
+	 * This method return customer purchase history
 	 */
 	public OrderHistory getOrderHistory() {
 		return orderHistory;
@@ -146,7 +152,9 @@ public class FarmShopService {
 	
 	
 	/**
-	 * @return
+	 * @return FlockOverview
+	 * 
+	 * This method returns overview of flock
 	 */
 	public FlockOverview getFlockOverview() {
 		flockOverview.setFlockInput(flockInput);
@@ -159,8 +167,8 @@ public class FarmShopService {
 	 * @param order
 	 * @return true/false
 	 * 
-	 *         This method is to place the order from stock. if the order is
-	 *         successful productStock will be updated accordingly
+	 * This method is to place the order from stock. if the order is
+	 * successful productStock will be updated accordingly
 	 */
 	public boolean placeOrder(Order order) {
 

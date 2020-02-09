@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * @author Eigenaar
+ * @author Sudhakaran Vasudevan
  *
  */
 @Component

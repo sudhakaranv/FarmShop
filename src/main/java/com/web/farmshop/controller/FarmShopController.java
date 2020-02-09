@@ -36,7 +36,9 @@ public class FarmShopController {
 	
 
 	/**
-	 * @return
+	 * @return FlockOverview
+	 * 
+	 * This method is to get the overview of Flock
 	 */
 	@GetMapping(value = "/flock", produces = "application/json")
 	public FlockOverview getFlockOverview() {
@@ -45,7 +47,9 @@ public class FarmShopController {
 	}
 
 	/**
-	 * @return
+	 * @return Products
+	 * 
+	 * This method is to fetch ProductsStock (Milk&Wool)
 	 */
 	@GetMapping(value = "/stock", produces = "application/json")
 	public Products getProductsStock() {
@@ -55,7 +59,9 @@ public class FarmShopController {
 
 	/**
 	 * @param order
-	 * @return
+	 * @return ResponseEntity 
+	 * 
+	 * This method is to place order to purchase products. 
 	 */
 	@PostMapping(value = "/orders", produces = "text/plain", consumes = "application/json")
 	public ResponseEntity<Object> placeOrder(@RequestBody Order order) {
@@ -69,7 +75,9 @@ public class FarmShopController {
 	}
 
 	/**
-	 * @return
+	 * @return OrderHistory
+	 * 
+	 * This method is to retrieve the purchase history of customers
 	 */
 	@GetMapping(value = "/orders", produces = "application/json")
 	public OrderHistory getOrderHistory() {

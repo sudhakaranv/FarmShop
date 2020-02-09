@@ -3,7 +3,7 @@ package com.web.farmshop.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * @author Eigenaar
+ * @author Sudhakaran Vasudevan
  *
  */
 public class Order {

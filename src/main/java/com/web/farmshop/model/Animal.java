@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 
 /**
- * @author Eigenaar
+ * @author Sudhakaran Vasudevan
  *
  */
 public class Animal {

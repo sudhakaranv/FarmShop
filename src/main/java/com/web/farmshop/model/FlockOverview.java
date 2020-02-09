@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 /**
- * @author Eigenaar
+ * @author Sudhakaran Vasudevan
  *
  */
 @Component
@@ -17,6 +17,12 @@ public class FlockOverview {
 
 	private List<Animal> flock;
 	
+	/**
+	 * @return List<Animal> flock 
+	 * 
+	 * This method combines the sheeps, lambs and goats list and return list of animals 
+	 * for flock overview 
+	 */
 	public List<Animal> getFlock() {
 		
 		flock=new ArrayList<>();
