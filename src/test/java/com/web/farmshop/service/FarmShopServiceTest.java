@@ -35,7 +35,7 @@ public class FarmShopServiceTest {
 	@BeforeAll
 	public void loadInputXml()
 	{
-		farmShopService.loadInputOnApplicationStartUp();
+		farmShopService.mapInputXmltoObject("input/flock_test.xml");
 		
 	}
 	

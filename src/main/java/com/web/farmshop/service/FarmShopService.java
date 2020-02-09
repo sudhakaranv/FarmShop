@@ -46,11 +46,10 @@ public class FarmShopService {
 	private OrderHistory orderHistory;
 	
 	private Products productsStock=null;
-
 	
 	@Value("${application.input.file}")
-	private String fileLocation;
-	
+	private String inputFileLocation;
+
 	@Value("${goat.milk.volume}")
 	private int milkPerGoat;
 	
@@ -63,8 +62,17 @@ public class FarmShopService {
 	 */
 	@PostConstruct
 	public void loadInputOnApplicationStartUp() {
+		mapInputXmltoObject(inputFileLocation);
+	}
+	
+
+	/**
+	 * @param xmlPath
+	 */
+	public void mapInputXmltoObject(String xmlPath)
+	{
 		ObjectMapper mapper = new XmlMapper();
-		Resource resource = new ClassPathResource(fileLocation);
+		Resource resource = new ClassPathResource(xmlPath);
 
 		try {
 			byte[] bdata = FileCopyUtils.copyToByteArray(resource.getInputStream());
@@ -75,8 +83,6 @@ public class FarmShopService {
 		}
 
 	}
-	
-
 	
 	/**
 	 * @return
