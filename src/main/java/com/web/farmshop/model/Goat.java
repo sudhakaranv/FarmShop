@@ -2,6 +2,10 @@ package com.web.farmshop.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
+/**
+ * @author Eigenaar
+ *
+ */
 @JacksonXmlRootElement(localName = "goat")
 public class Goat extends Animal{
 	

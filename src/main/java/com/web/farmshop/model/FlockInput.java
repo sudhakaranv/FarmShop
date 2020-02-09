@@ -1,16 +1,18 @@
 package com.web.farmshop.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 
+/**
+ * @author Eigenaar
+ *
+ */
 @Component
 @JacksonXmlRootElement(localName = "flock")
 public class FlockInput {

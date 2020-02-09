@@ -5,6 +5,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Eigenaar
+ *
+ */
 @Component
 public class OrderHistory {
 

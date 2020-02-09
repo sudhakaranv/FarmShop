@@ -2,10 +2,19 @@ package com.web.farmshop.model;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+/**
+ * @author Eigenaar
+ *
+ */
 @Component
 public class Products {
-
+    
+	@JsonInclude(Include.NON_DEFAULT)
 	private int wool;
+	@JsonInclude(Include.NON_DEFAULT)
 	private int milk;
 
 	public int getWool() {

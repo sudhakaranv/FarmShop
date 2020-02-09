@@ -1,5 +1,9 @@
 package com.web.farmshop.model;
 
+/**
+ * @author Eigenaar
+ *
+ */
 public class Order {
 
 	private String customer;

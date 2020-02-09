@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 
+/**
+ * @author Eigenaar
+ *
+ */
 public class Animal {
 
 	
